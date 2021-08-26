@@ -1,5 +1,6 @@
 package com.lilcode.example.serviceexample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,5 +22,10 @@ class MainActivity : AppCompatActivity() {
     fun buttonClick(view: View) {
         // 시작시킬 서비스의 클래스 이름을 갖는 새로운 인텐트 객체 생성 후 이것을 startService 에 넘김
         JobIntentService.enqueueWork(this, MyJobIntentService::class.java, SERVICE_ID, intent)
+    }
+
+    fun buttonClick2(view: View) {
+        intent = Intent(this, MyService::class.java)
+        startService(intent)
     }
 }
