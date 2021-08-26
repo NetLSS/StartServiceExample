@@ -79,3 +79,5 @@ class MyService : Service(), CoroutineScope {
     }
 }
 ```
+
+- 한번 봐보기 : https://bb-library.tistory.com/109
