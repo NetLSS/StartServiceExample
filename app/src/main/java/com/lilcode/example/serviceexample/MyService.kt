@@ -30,7 +30,7 @@ class MyService : Service(), CoroutineScope {
         return Service.START_STICKY
     }
 
-    suspend fun performTask(startId: Int) {
+    private suspend fun performTask(startId: Int) {
         Log.i(TAG, "Service onStartCommand " + startId)
         var i: Int = 0
         while (i <= 3) {
